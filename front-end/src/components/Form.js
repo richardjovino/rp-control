@@ -60,12 +60,12 @@ const Form = ({getProducts, onEdit, setOnEdit}) =>{
         }
 
         if(onEdit){
-            await axios.put(`http://localhost:8000/product/${onEdit.id}`, {
+            await axios.put(`http://34.204.93.4:8000/product/${onEdit.id}`, {
                 name: produto.name.value,
                 stock: Number(produto.stock.value)
             }).then(({data}) => toast.success(data)).catch(({data}) => toast.error(data))
         }else{
-            await axios.post("http://localhost:8000/product",{
+            await axios.post("http://34.204.93.4:8000/product",{
                 name: produto.name.value,
                 stock:Number(produto.stock.value)
             }).then(({data}) => toast.success(data)).catch(({data}) => toast.error(data))

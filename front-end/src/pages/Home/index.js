@@ -25,7 +25,7 @@ const Home = () =>{
 
     const getProducts = async() =>{
         try{
-            const res = await axios.get("http://localhost:8000/product");
+            const res = await axios.get("http://34.204.93.4:8000/product");
             setProduto(res.data.sort((a,b) => (a.name > b.name ? 1 : -1)))
         }catch(error){
             toast.error(error)
